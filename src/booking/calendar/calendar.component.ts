@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarComponent implements OnInit {
 
+  currentDay: number;
   constructor() { }
 
   ngOnInit() {
