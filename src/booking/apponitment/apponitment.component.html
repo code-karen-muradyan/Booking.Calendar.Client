@@ -1,5 +1,33 @@
-<app-header>
-    <app-room></app-room>
-</app-header>
-
-<app-timeduration></app-timeduration>
+<div>
+    <app-header>
+        <br>
+        <div class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center">
+            <app-room></app-room>
+        </div>
+        <br>
+    </app-header>
+    <div class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center calendartop calendarwidth">
+        <app-calendar></app-calendar>
+    </div>
+    <div class="col-md-5 col-lg-5 col-xs-5 col-md-5 display-center">
+            <div class="container">
+                      <div class="col align-self-start">
+                      </div>
+                      <div class="col align-self-center btn-center">
+                            <app-timeduration></app-timeduration>
+                      </div>
+                      <div class="col align-self-end">
+                      </div>
+                    </div>
+   
+    </div>
+    <br>
+    <div class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center">
+        <app-timeline></app-timeline>
+    </div>
+    <br>
+    <div class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center">
+        <app-createappointment></app-createappointment>
+    </div>
+    <br>
+</div>

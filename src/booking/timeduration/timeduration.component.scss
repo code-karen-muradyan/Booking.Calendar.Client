@@ -1,0 +1,22 @@
+.btntimed{
+    border-radius: 50px;
+    height: 70px;
+    white-space: nowrap;
+    background: #e4749a;
+    width: 50px;
+}
+
+.timetext{
+    line-height: 3.3;
+    margin-left: -22px;
+    margin-right: -20px;
+}
+
+button:hover{
+    background: rgb(192, 191, 191);
+    color: #000;
+    border: none;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}

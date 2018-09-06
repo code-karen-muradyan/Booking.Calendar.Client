@@ -1,0 +1,8 @@
+.list-group-item:hover{
+    background: rgb(197, 105, 105);
+    color: #fff;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    z-index:0;
+}

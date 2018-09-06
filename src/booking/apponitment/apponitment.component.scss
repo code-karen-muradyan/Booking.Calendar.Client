@@ -1,0 +1,24 @@
+.calendartop{
+    position: relative;
+    top: -10px;
+    z-index: 1;
+}
+
+.display-center{
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calendarwidth{
+    width: 18.5%;
+}
+.btn-center{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+    height: auto;
+}
