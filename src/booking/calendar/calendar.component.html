@@ -1,1 +1,1 @@
-<angular2-date-picker [(ngModel)]="date" [settings]="settings"></angular2-date-picker>
+<angular2-date-picker [(ngModel)]="date" (onDateSelect)="selectionchange($event)" [settings]="settings"></angular2-date-picker>

@@ -2,32 +2,32 @@
     <app-header>
         <br>
         <div class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center">
-            <app-room></app-room>
+            <app-room (selection_change)="roomchange($event)"></app-room>
         </div>
         <br>
     </app-header>
-    <div class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center calendartop calendarwidth">
-        <app-calendar></app-calendar>
-    </div>
-    <div class="col-md-5 col-lg-5 col-xs-5 col-md-5 display-center">
-            <div class="container">
-                      <div class="col align-self-start">
-                      </div>
-                      <div class="col align-self-center btn-center">
-                            <app-timeduration></app-timeduration>
-                      </div>
-                      <div class="col align-self-end">
-                      </div>
-                    </div>
    
+    <div *ngIf="state==1" class="col-md-5 col-lg-5 col-xs-5 col-md-5 display-center">
+        <div class="container">
+            <div class="col align-self-start">
+            </div>
+            <div class="col align-self-center btn-center">
+                <app-timeduration (selection_change)="timedurationchagne($event)"></app-timeduration>
+            </div>
+            <div class="col align-self-end">
+            </div>
+        </div>
+    </div>
+    <div *ngIf="state==2 || state==3" class="col-md-4 col-lg-4 col-xs-4 col-md-4  calendartop calendarwidth">
+          <app-calendar (selection_change)="calendarchange($event)"></app-calendar>
+    </div>
+    <br> 
+    <div *ngIf="state==3" class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center">
+        <app-timeline [duration]="duration" (selection_change)="timelinechange($event)"></app-timeline>
     </div>
     <br>
-    <div class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center">
-        <app-timeline></app-timeline>
-    </div>
-    <br>
-    <div class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center">
-        <app-createappointment></app-createappointment>
+    <div *ngIf="state==4" class="col-md-4 col-lg-4 col-xs-4 col-md-4 display-center">
+        <app-createappointment (createcommand)="createAppointment($event)"></app-createappointment>
     </div>
     <br>
 </div>

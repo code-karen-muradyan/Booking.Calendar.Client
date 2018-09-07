@@ -7,11 +7,11 @@
               <label for="materialFormCardNameEx" class="font-weight-light">Your name</label>
             </div>
             <div class="md-form">
-                    <input type="text" id="materialFormCardNameEx_1"  class="form-control" mdbInputDirective>
-                    <label for="materialFormCardNameEx_1" class="font-weight-light">Your email</label>
+                    <input [(ngModel)]="current.title" type="text" id="materialFormCardNameEx_1"  class="form-control" mdbInputDirective>
+                    <label [(ngModel)]="current.from" for="materialFormCardNameEx_1" class="font-weight-light">Your email</label>
                   </div>
             <div class="py-4 mt-3">
-              <button mdbBtn color="pink" class="waves-light" type="submit" mdbWavesEffect>Book the slot </button>
+              <button (click)="create()" mdbBtn color="pink" class="waves-light" type="submit" mdbWavesEffect>Book the slot </button>
             </div>
           </form>
         </mdb-card-body>

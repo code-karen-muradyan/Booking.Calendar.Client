@@ -1,11 +1,6 @@
 <ul class="list-group">
-        <strong  class="list-group-item  waves-light" mdbWavesEffect>
+        <strong  class="waves-light" mdbWavesEffect>
                September 22nd:
         </strong>
-        <li class="list-group-item">08:30</li>
-        <li class="list-group-item">08:30</li>
-        <li class="list-group-item">08:30</li>
-        <li class="list-group-item">08:30</li>
-        <li class="list-group-item">08:30</li>
-        <li class="list-group-item">08:30</li>
-      </ul>
+        <li *ngFor="let row of durationsplits; let itemindex=index" (click)="selectionchange(row)" class="list-group-item">{{displeytime(row)}}</li>
+</ul>

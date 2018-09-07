@@ -6,10 +6,12 @@ import { TimedurationComponent } from './timeduration/timeduration.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { CreateappointmentComponent } from './createappointment/createappointment.component';
-
+import { BookingService } from './booking.service';
+import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
     imports: [
-        SharedModule
+        BrowserModule,
+        SharedModule.forRoot()
     ],
     declarations: [RoomComponent,
                    ApponitmentComponent,
@@ -18,15 +20,16 @@ import { CreateappointmentComponent } from './createappointment/createappointmen
                    TimelineComponent,
                    CreateappointmentComponent],
     exports: [
-        ApponitmentComponent
+
     ],
     providers: [
+        BookingService
     ]
 })
 export class BookingModule {
     static forRoot(): ModuleWithProviders {
         return {
-            ngModule: SharedModule,
+            ngModule: BookingModule,
             providers: [
             ]
         };

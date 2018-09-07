@@ -1,9 +1,12 @@
+<!-- <div class="col align-self-center btn-center">
+    <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">15 min.</p></button>
+    <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">30 min.</p></button>
+    <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">60 min.</p></button>
+    <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">90 min.</p></button>
+    <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">120 min.</p></button>
+    <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">15 min.</p></button>
+</div>
+             -->
 <div class="col align-self-center btn-center">
-            <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">15 min.</p></button>
-            <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">30 min.</p></button>
-            <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">60 min.</p></button>
-            <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">90 min.</p></button>
-            <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">120 min.</p></button>
-            <button mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect><p class="timetext">15 min.</p></button>
-        </div>
-            
+    <button *ngFor="let row of keys(); let itemindex=index" mdbBtn type="button" class="waves-light fa-border btntimed" mdbWavesEffect (click)="selectionchange(row)"><p class="timetext">{{row}} min.</p></button>   
+</div>
